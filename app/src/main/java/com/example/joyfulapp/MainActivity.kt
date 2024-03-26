@@ -3,7 +3,6 @@ package com.example.joyfulapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import io.flutter.embedding.android.FlutterActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,20 +14,11 @@ class MainActivity : AppCompatActivity() {
 
         // Set click listeners for each button
         button1.setOnClickListener {
-            navigateToFlutterScreen("/blueScreen")
+            JoyRouter.navigateTo("/blueScreen", this)
         }
 
         button2.setOnClickListener {
-            navigateToFlutterScreen("/pinkScreen")
+            JoyRouter.navigateTo("/pinkScreen", this)
         }
-    }
-
-    private fun navigateToFlutterScreen(route: String) {
-        startActivity(
-            FlutterActivity
-                .withNewEngine()
-                .initialRoute(route)
-                .build(this)
-        );
     }
 }
