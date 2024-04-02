@@ -3,7 +3,6 @@ package com.example.joyfulapp
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentContainerView
 import io.flutter.embedding.android.FlutterFragment
 
 class NativeGreenScreenActivity : AppCompatActivity() {
@@ -23,17 +22,26 @@ class NativeGreenScreenActivity : AppCompatActivity() {
             JoyRouter.navigateTo("/pinkScreen", this)
         }
 
-        initFlutterFragment()
+        initFlutterFragments()
     }
 
-    private fun initFlutterFragment() {
-
-        val flutterFragment: FlutterFragment = FlutterFragment.withNewEngineInGroup(JoyRouter.engineGroupId)
+    private fun initFlutterFragments() {
+        // init first fragment
+        val flutterFragment1: FlutterFragment = FlutterFragment.withNewEngineInGroup(JoyRouter.engineGroupId)
             .initialRoute("/orangeSquare")
+            .build()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainerView1, flutterFragment1)
+            .commit()
+
+
+        // init second fragment
+        val flutterFragment2: FlutterFragment = FlutterFragment.withNewEngineInGroup(JoyRouter.engineGroupId)
+            .initialRoute("/blueScreen")
             .build()
 
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragmentContainerView, flutterFragment)
+            .replace(R.id.fragmentContainerView2, flutterFragment2)
             .commit()
     }
 }

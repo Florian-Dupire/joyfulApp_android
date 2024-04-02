@@ -34,33 +34,55 @@
             android:textSize="20sp" />
     </LinearLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="16dp">
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Open Flutter blue Screen"
+                android:id="@+id/buttonBlueScreen"/>
 
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Open Flutter blue Screen"
-        android:id="@+id/buttonBlueScreen"/>
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Open Flutter pink Screen"
+                android:id="@+id/buttonPinkScreen"/>
 
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Open Flutter pink Screen"
-        android:id="@+id/buttonPinkScreen"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Flutter Fragment: "
-        android:layout_marginTop="40dp"
-        android:textSize="18sp"
-        android:textStyle="bold">
-    </TextView>
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="10dp"/>
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flutter Fragment1: "
+                android:layout_marginTop="40dp"
+                android:textSize="18sp"
+                android:textStyle="bold">
+            </TextView>
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView1"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flutter Fragment2: "
+                android:layout_marginTop="40dp"
+                android:textSize="18sp"
+                android:textStyle="bold">
+            </TextView>
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView2"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
