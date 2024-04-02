@@ -22,6 +22,12 @@ object JoyRouter {
                     .initialRoute("/pinkScreen")
                     .build(it)
             }
+        ),
+        JoyRoute(
+            route = "/greenScreen",
+            intentProvider = {
+                Intent(it, NativeGreenScreenActivity::class.java)
+            }
         )
     )
 

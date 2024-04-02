@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         val button1: Button = findViewById(R.id.buttonBlueScreen)
         val button2: Button = findViewById(R.id.buttonPinkScreen)
+        val button3: Button = findViewById(R.id.buttonGreenScreen)
 
         // Set click listeners for each button
         button1.setOnClickListener {
@@ -26,6 +27,10 @@ class MainActivity : AppCompatActivity() {
 
         button2.setOnClickListener {
             JoyRouter.navigateTo("/pinkScreen", this)
+        }
+
+        button3.setOnClickListener {
+            JoyRouter.navigateTo("/greenScreen", this)
         }
     }
 

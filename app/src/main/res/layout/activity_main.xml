@@ -29,4 +29,11 @@
         android:text="Open Flutter pink Screen"
         android:id="@+id/buttonPinkScreen"/>
 
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Open Native green Screen"
+        android:id="@+id/buttonGreenScreen"/>
+
 </LinearLayout>
