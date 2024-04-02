@@ -2,7 +2,6 @@ package com.example.joyfulapp
 
 import android.content.Context
 import android.content.Intent
-import io.flutter.embedding.android.FlutterActivity
 
 object JoyRouter {
     const val engineGroupId = "myFullOfJoyEngineGroup"
@@ -11,7 +10,7 @@ object JoyRouter {
         JoyRoute(
             route = "/blueScreen",
             intentProvider = {
-                FlutterActivity.withNewEngineInGroup(engineGroupId)
+                MyFlutterActivity.withNewEngineInGroup(engineGroupId)
                     .initialRoute("/blueScreen")
                     .build(it)
             }
@@ -19,7 +18,7 @@ object JoyRouter {
         JoyRoute(
             route = "/pinkScreen",
             intentProvider = {
-                FlutterActivity.withNewEngineInGroup(engineGroupId)
+                MyFlutterActivity.withNewEngineInGroup(engineGroupId)
                     .initialRoute("/pinkScreen")
                     .build(it)
             }
