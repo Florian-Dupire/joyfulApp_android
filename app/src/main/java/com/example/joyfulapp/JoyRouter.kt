@@ -5,22 +5,22 @@ import android.content.Intent
 import io.flutter.embedding.android.FlutterActivity
 
 object JoyRouter {
+    const val engineGroupId = "myFullOfJoyEngineGroup"
+
     private val routes = arrayOf(
         JoyRoute(
             route = "/blueScreen",
             intentProvider = {
-                FlutterActivity
-                    .withNewEngine()
-                    .initialRoute("/blue")
+                FlutterActivity.withNewEngineInGroup(engineGroupId)
+                    .initialRoute("/blueScreen")
                     .build(it)
             }
         ),
         JoyRoute(
             route = "/pinkScreen",
             intentProvider = {
-                FlutterActivity
-                    .withNewEngine()
-                    .initialRoute("/pink")
+                FlutterActivity.withNewEngineInGroup(engineGroupId)
+                    .initialRoute("/pinkScreen")
                     .build(it)
             }
         )
