@@ -49,4 +49,18 @@
         android:text="Open Flutter pink Screen"
         android:id="@+id/buttonPinkScreen"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flutter Fragment: "
+        android:layout_marginTop="40dp"
+        android:textSize="18sp"
+        android:textStyle="bold">
+    </TextView>
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp"/>
+
 </LinearLayout>

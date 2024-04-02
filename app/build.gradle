@@ -48,6 +48,7 @@ android {
 
 dependencies {
     implementation 'androidx.core:core-ktx:+'
+    implementation 'androidx.fragment:fragment-ktx:1.6.2'
     debugImplementation 'com.example.joyfulapp_flutter:flutter_debug:1.0'
     profileImplementation 'com.example.joyfulapp_flutter:flutter_profile:1.0'
     releaseImplementation 'com.example.joyfulapp_flutter:flutter_release:1.0'
